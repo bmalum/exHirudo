@@ -1,10 +1,11 @@
 defmodule ExHirudo.Mixfile do
   use Mix.Project
+  require(Logger)
 
   def project do
     [app: :exHirudo,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -12,9 +13,11 @@ defmodule ExHirudo.Mixfile do
 
   def variables do
   [
-    download_workers: 5,
-    API_Checkinterval: 120,   # in Seconds
-    dl_path: "/Users/bMalum/Downloads/"
+    download_workers: 1,
+    API_Checkinterval: 6,   # in Seconds
+    dl_path: "/Users/bMalum/Downloads/",
+    api_endpoint: "http://demo3380079.mockable.io/",
+    api_key: "2c664e6800b56b00e9244b05d953c54edfeb7eb6477bb2ac9a154d9f5ddee247/"
   ]
   end
   # Configuration for the OTP application
