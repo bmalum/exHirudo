@@ -30,17 +30,7 @@ defmodule ExHirudo.DownloadWorkerPool do
     {state, url, filename, cookie} = ExHirudo.Pipeline.findHost(url)
     cookie = String.to_charlist(cookie)
     Logger.debug("Started Download")
-          #{:ok, streamer} = GenServer.start(ExHirudo.Streamer, {filename, []})
       {:ok, status, headers, body} = :ibrowse.send_req(url, [{:cookie, cookie}], :get, [], [{:save_response_to_file, filename}])
       Logger.debug "Finished Download"
-      #wait_for_shutdown(streamer)
-    end
-
-    defp wait_for_shutdown(process) do
-      case Process.alive?(process) do
-        true    -> :timer.sleep(1000)
-        wait_for_shutdown(process)
-        _ -> Process.exit(process, :kill)
-      end
     end
   end
