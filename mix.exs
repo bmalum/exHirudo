@@ -19,8 +19,8 @@ defmodule ExHirudo.Mixfile do
     download_workers: 1,
     API_Checkinterval: 5,   # in Seconds
     dl_path: "/Users/bMalum/Downloads/",
-    api_endpoint: "http://demo3380079.mockable.io/",
-    api_key: "2c664e6800b56b00e9244b05d953c54edfeb7eb6477bb2ac9a154d9f5ddee247/",
+    api_endpoint: "http://127.0.0.1:4000/api/v1/",
+    api_key: "123/",
     ul_to: "login=%26id%3D2243662%26pw%3Db23d310f6f89d9a4ae8f5856a946f2caa28419ca%26cks%3D64ec890a4bdb"
   ]
   end
