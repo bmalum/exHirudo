@@ -1,3 +1,8 @@
+#########################################
+##   DEPRECATED - not needed anymore   ##
+##   was used for HTTPosion            ##
+#########################################
+
 defmodule ExHirudo.Streamer do
   use GenServer
   import ExHirudo.Mixfile
