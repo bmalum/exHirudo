@@ -18,8 +18,8 @@ defmodule ExHirudo.Mixfile do
   [
     download_workers: 1,
     API_Checkinterval: 5,   # in Seconds
-    dl_path: "/Users/bMalum/Downloads/",
-    api_endpoint: "http://127.0.0.1:4000/api/v1/",
+    dl_path: "/Users/bMalum/Downloads/",            # trailing / needed by convention
+    api_endpoint: "http://127.0.0.1:4000/api/v1/",  # trailing / needed by convention
     api_key: "123/",
     ul_to: "login=%26id%3D2243662%26pw%3Db23d310f6f89d9a4ae8f5856a946f2caa28419ca%26cks%3D64ec890a4bdb"
   ]
@@ -48,8 +48,8 @@ defmodule ExHirudo.Mixfile do
   defp deps do
     [{:httpoison, "~> 0.9.0"},
      {:exjson, "~> 0.5.0"},
-   {:expool, "~> 0.2.0"},
- {:ex_doc, "~> 0.12", only: :dev},
-{:ibrowse, "~> 4.2"}]
+     {:expool, "~> 0.2.0"},
+     {:ex_doc, "~> 0.12", only: :dev},
+     {:ibrowse, "~> 4.2"}]
   end
 end
