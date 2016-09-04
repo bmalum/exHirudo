@@ -10,8 +10,7 @@ defmodule ExHirudo.DownloadWorkerPool do
   end
 
   def start_link(state, opts \\ []) do
-    Logger.info("ExHirudo.PoolHandler Process started with PID #{inspect(self())}
-    and registered as :download_pool")
+    Logger.info("ExHirudo.PoolHandler Process started with PID #{inspect(self())} and registered as :download_pool")
     Logger.info(inspect(state))
     GenServer.start_link(__MODULE__, state, opts)
   end
